@@ -8,7 +8,6 @@ const axiosInstance = axios.create({
   },
 });
 
-// Add request interceptor to add token
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("jwtToken") || "";
