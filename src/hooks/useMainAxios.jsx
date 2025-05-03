@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://scoial-madia-api.vercel.app",
+  baseURL: "https://server-test-production-5225.up.railway.app/",
 
   headers: {
     "Content-Type": "application/json",
