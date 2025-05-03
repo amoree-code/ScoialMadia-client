@@ -74,7 +74,7 @@ const Feed = ({ userId }) => {
     formData.append("img", file);
 
     try {
-      const response = await axios.post("/api/Users/UploadAvatar", formData, {
+      const response = await axios.post("/api/users/upload-avatar", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
