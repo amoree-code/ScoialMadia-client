@@ -8,11 +8,11 @@ const Post = ({ post }) => {
   };
 
   const avatarUrl = post.user?.img
-    ? `https://social-madia-api.vercel.app/uploads/${post.user.img}`
+    ? `https://server-test-production-5225.up.railway.app/${post.user.img}`
     : "/noAvatar.png";
 
   const postImageUrl = post.img
-    ? `https://social-madia-api.vercel.app/uploads/${post.img}`
+    ? `https://server-test-production-5225.up.railway.app/${post.img}`
     : null;
 
   return (
