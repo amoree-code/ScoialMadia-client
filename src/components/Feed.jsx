@@ -129,7 +129,7 @@ const Feed = ({ userId }) => {
   }
 
   const avatarUrl = userInfo?.img
-    ? `http://localhost:4777/uploads/${userInfo.img}`
+    ? `https://social-madia-api.vercel.app/uploads/${userInfo.img}`
     : "/noAvatar.png";
 
   return (

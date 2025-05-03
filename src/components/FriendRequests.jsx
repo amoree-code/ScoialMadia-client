@@ -66,7 +66,7 @@ const FriendRequests = () => {
   const getImageUrl = (img) => {
     if (!img) return "/noAvatar.png";
     if (img.startsWith("http")) return img;
-    return `http://localhost:4777/uploads/${img}`;
+    return `https://social-madia-api.vercel.app/uploads/${img}`;
   };
 
   return (
