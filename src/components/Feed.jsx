@@ -63,8 +63,6 @@ const Feed = ({ userId }) => {
   const handleImageClick = () => {
     if (userId === userInfo?.id) {
       fileInputRef.current.click();
-    } else {
-      alert("You cannot change this user's avatar");
     }
   };
 
@@ -133,7 +131,7 @@ const Feed = ({ userId }) => {
 
   // Handle image error for avatar
   const avatarUrl = userInfo?.img
-    ? `http://localhost:4777${userInfo.img}`
+    ? `https://server-test-production-5225.up.railway.app${userInfo.img}`
     : "/noAvatar.png";
 
   return (

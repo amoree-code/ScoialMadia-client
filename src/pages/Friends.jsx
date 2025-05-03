@@ -33,7 +33,6 @@ const Friends = () => {
           token: `Bearer ${token}`,
         },
       });
-      // Filter out the current user and mutual friends from suggestions
       const filteredUsers = res.data.filter(
         (user) =>
           user.id !== userId &&
@@ -76,9 +75,9 @@ const Friends = () => {
   }, [activeTab, acceptedFriends, friendsSuggested]);
 
   const getImageUrl = (img) => {
+    console.log(img);
     if (!img) return "/noAvatar.png";
-    if (img.includes("uploads/")) return `http://localhost:4777${img}`;
-    return `http://localhost:4777${img}`;
+    return `https://server-test-production-5225.up.railway.app${img}`;
   };
 
   return (

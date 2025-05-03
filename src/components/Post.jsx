@@ -8,10 +8,12 @@ const Post = ({ post }) => {
   };
 
   const avatarUrl = post.user?.img
-    ? `http://localhost:4777${post.user.img}`
+    ? `https://server-test-production-5225.up.railway.app${post.user.img}`
     : "/noAvatar.png";
 
-  const postImageUrl = post.img ? `http://localhost:4777${post.img}` : null;
+  const postImageUrl = post.img
+    ? `https://server-test-production-5225.up.railway.app${post.img}`
+    : null;
 
   return (
     <div className="flex flex-col gap-4 bg-white p-4 rounded-lg shadow-sm">
