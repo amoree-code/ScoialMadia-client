@@ -77,9 +77,8 @@ const Friends = () => {
 
   const getImageUrl = (img) => {
     if (!img) return "/noAvatar.png";
-    if (img.includes("uploads/"))
-      return `https://server-test-production-5225.up.railway.app/${img}`;
-    return `https://server-test-production-5225.up.railway.app/${img}`;
+    if (img.includes("uploads/")) return `http://localhost:4777${img}`;
+    return `http://localhost:4777${img}`;
   };
 
   return (

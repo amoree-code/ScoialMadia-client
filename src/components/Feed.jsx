@@ -63,6 +63,8 @@ const Feed = ({ userId }) => {
   const handleImageClick = () => {
     if (userId === userInfo?.id) {
       fileInputRef.current.click();
+    } else {
+      alert("You cannot change this user's avatar");
     }
   };
 
@@ -85,6 +87,7 @@ const Feed = ({ userId }) => {
           ...userInfo,
           img: response.data.img,
         });
+        window.location.reload();
       }
     } catch (error) {
       console.error("Error uploading image:", error);
@@ -129,9 +132,8 @@ const Feed = ({ userId }) => {
   }
 
   // Handle image error for avatar
-
   const avatarUrl = userInfo?.img
-    ? `http://localhost:4777/uploads/${userInfo.img}`
+    ? `http://localhost:4777${userInfo.img}`
     : "/noAvatar.png";
 
   return (

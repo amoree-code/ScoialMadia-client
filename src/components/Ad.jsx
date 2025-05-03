@@ -1,8 +1,6 @@
 const Ad = ({ size }) => {
   return (
     <div className="p-4 bg-white rounded-lg shadow-md text-xs flex flex-col gap-4">
-      {/* top */}
-      {/* button */}
       <div
         className={`flex flex-col mt-4 ${size === "sm" ? "gap-2" : "gap-4"}`}
       >
