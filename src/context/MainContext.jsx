@@ -16,6 +16,7 @@ export const MainProvider = ({ children }) => {
   const [token, setToken] = useState(
     () => localStorage.getItem("jwtToken") || null
   );
+
   const [userId, setUserId] = useState(null);
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
