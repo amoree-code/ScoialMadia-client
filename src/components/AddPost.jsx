@@ -24,22 +24,30 @@ const AddPost = () => {
   };
 
   const handleTextChange = (e) => {
-    setPostText(e.target.value); // Update post text
+    setPostText(e.target.value);
   };
 
   const handlePostSubmit = async () => {
     try {
       const formData = new FormData();
-      formData.append("desc", postText);
+      formData.append("desc", postText); // دائماً نضيف الوصف
 
+      // هذا هو الجزء الذي يجعل الصورة اختيارية:
       if (fileInputRef.current.files[0]) {
-        formData.append("img", fileInputRef.current.files[0]);
+        // نتحقق ما إذا كان هناك ملف محدد
+        formData.append("img", fileInputRef.current.files[0]); // إذا كان هناك ملف،  نضيفه
+      } else {
+        // إذا لم يكن هناك ملف، لا نضيف حقل "img" إلى formData
+        console.log(
+          "No image selected, post will be created without an image."
+        );
       }
+      // إذا لم يكن هناك ملف محدد، فلن يتم إضافة حقل "img" إلى formData، وهذا هو المطلوب!
 
       const response = await axios.post("/api/Home/CreatePost", formData, {
         headers: {
           token: `Bearer ${token}`,
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "multipart/form-data", // مهم جداً لاستقبال الملفات
         },
       });
 
