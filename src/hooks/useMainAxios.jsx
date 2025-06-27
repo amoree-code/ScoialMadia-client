@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://server-test-production-5225.up.railway.app",
+  // baseURL: "https://server-test-production-5225.up.railway.app",
+  baseURL: "https://server-test-green.vercel.app",
   // baseURL: "http://localhost:4777",
   headers: {
     "Content-Type": "application/json",

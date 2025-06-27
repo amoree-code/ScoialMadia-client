@@ -77,7 +77,7 @@ const Friends = () => {
   const getImageUrl = (img) => {
     console.log(img);
     if (!img) return "/noAvatar.png";
-    return `https://server-test-production-5225.up.railway.app${img}`;
+    return `https://server-test-green.vercel.app${img}`;
   };
 
   return (

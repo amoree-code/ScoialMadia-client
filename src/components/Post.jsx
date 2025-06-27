@@ -8,11 +8,11 @@ const Post = ({ post }) => {
   };
 
   const avatarUrl = post.user?.img
-    ? `https://server-test-production-5225.up.railway.app${post.user.img}`
+    ? `https://server-test-green.vercel.app${post.user.img}`
     : "/noAvatar.png";
 
   const postImageUrl = post.img
-    ? `https://server-test-production-5225.up.railway.app${post.img}`
+    ? `https://server-test-green.vercel.app${post.img}`
     : null;
 
   return (

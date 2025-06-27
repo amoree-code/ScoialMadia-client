@@ -131,7 +131,7 @@ const Feed = ({ userId }) => {
 
   // Handle image error for avatar
   const avatarUrl = userInfo?.img
-    ? `https://server-test-production-5225.up.railway.app${userInfo.img}`
+    ? `https://server-test-green.vercel.app${userInfo.img}`
     : "/noAvatar.png";
 
   return (

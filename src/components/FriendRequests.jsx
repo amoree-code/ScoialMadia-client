@@ -66,7 +66,7 @@ const FriendRequests = () => {
   const getImageUrl = (img) => {
     if (!img) return "/noAvatar.png";
     if (img.startsWith("http")) return img;
-    return `https://server-test-production-5225.up.railway.app${img}`;
+    return `https://server-test-green.vercel.app${img}`;
   };
 
   return (
